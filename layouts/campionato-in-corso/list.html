@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{ $c := .Site.Data.campionato }}
+<div class="container">
+  <div class="section-intro">
+    <p class="section-intro__eyebrow">{{ .Site.Params.categoria }} · {{ .Site.Params.girone }}</p>
+    <h2>Campionato in corso</h2>
+    <p>Classifica aggiornata all'ultima giornata disputata.</p>
+  </div>
+
+  <table class="tabellone">
+    <caption>Classifica — Stagione {{ .Site.Params.stagioneCorrente }}</caption>
+    <thead>
+      <tr>
+        <th scope="col">Pos</th>
+        <th scope="col">Squadra</th>
+        <th scope="col">Pt</th>
+        <th scope="col">G</th>
+        <th scope="col">V</th>
+        <th scope="col">N</th>
+        <th scope="col">P</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $c.classifica }}
+      <tr {{ if .nostra }}class="riga-nostra"{{ end }}>
+        <td>{{ .pos }}</td>
+        <td>{{ .squadra }}</td>
+        <td class="punti">{{ .punti }}</td>
+        <td>{{ .giocate }}</td>
+        <td>{{ .vinte }}</td>
+        <td>{{ .pareggiate }}</td>
+        <td>{{ .perse }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+
+  {{ with $c.prossimaPartita }}
+  <div class="prossima-partita">
+    <p class="prossima-partita__eyebrow">{{ .giornata }}ª giornata · Prossima partita</p>
+    <p class="prossima-partita__match">{{ .casa }} — {{ .trasferta }}</p>
+    <p>{{ .campo }} · {{ dateFormat "Monday 02 January 2006" .data }} ore {{ .ora }}</p>
+  </div>
+  {{ end }}
+
+  <div class="section-intro" style="padding-top:8px;">
+    <h2>Risultati recenti</h2>
+  </div>
+  <ul class="risultati-recenti">
+    {{ range $c.risultatiRecenti }}
+    <li>
+      <span class="giornata-tag">{{ .giornata }}ª giornata<br>{{ dateFormat "02/01" .data }}</span>
+      <span>{{ .casa }} – {{ .trasferta }}</span>
+      <span class="punteggio">{{ .golCasa }} – {{ .golTrasferta }}</span>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

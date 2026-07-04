@@ -1,0 +1,41 @@
+stagioni:
+  - stagione: "2024/2025"
+    categoria: "Seconda Categoria"
+    girone: "Girone B"
+    piazzamento: 3
+    puntiFinali: 52
+    partiteGiocate: 26
+    vittorie: 15
+    pareggi: 7
+    sconfitte: 4
+    note: "Semifinale playoff, eliminati ai rigori."
+  - stagione: "2023/2024"
+    categoria: "Terza Categoria"
+    girone: "Girone C"
+    piazzamento: 1
+    puntiFinali: 61
+    partiteGiocate: 24
+    vittorie: 19
+    pareggi: 4
+    sconfitte: 1
+    note: "Promossi in Seconda Categoria da primi in classifica."
+  - stagione: "2022/2023"
+    categoria: "Terza Categoria"
+    girone: "Girone C"
+    piazzamento: 6
+    puntiFinali: 34
+    partiteGiocate: 22
+    vittorie: 9
+    pareggi: 7
+    sconfitte: 6
+    note: ""
+  - stagione: "2021/2022"
+    categoria: "Terza Categoria"
+    girone: "Girone A"
+    piazzamento: 8
+    puntiFinali: 27
+    partiteGiocate: 22
+    vittorie: 7
+    pareggi: 6
+    sconfitte: 9
+    note: "Stagione ripresa dopo lo stop per emergenza sanitaria."

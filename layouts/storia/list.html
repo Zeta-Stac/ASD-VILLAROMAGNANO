@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $s := .Site.Data.storia }}
+<div class="container">
+  <div class="section-intro">
+    <p class="section-intro__eyebrow">Dal {{ (index $s.eventi 0).anno }} a oggi</p>
+    <h2>Storia della società</h2>
+  </div>
+
+  <div class="registro">
+    {{ range $s.eventi }}
+    <div class="registro__voce">
+      <div class="registro__anno">{{ .anno }}</div>
+      <div class="registro__testo">
+        <h3>{{ .titolo }}</h3>
+        <p>{{ .testo }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ with $s.bacheca }}
+  <div class="bacheca">
+    <h3>Bacheca</h3>
+    <ul>
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

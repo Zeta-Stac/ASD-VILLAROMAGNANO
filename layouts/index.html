@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{ $c := .Site.Data.campionato }}
+<section class="hero">
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">{{ .Site.Params.categoria }} · {{ .Site.Params.girone }} · Stagione {{ .Site.Params.stagioneCorrente }}</p>
+    <h1 class="hero__title">{{ .Site.Params.nomeSquadra }}</h1>
+    <p class="hero__lead">{{ .Site.Params.sottotitolo }}. Rosa, classifica, risultati e la storia della società, tutto in un solo posto.</p>
+
+    {{ with $c.prossimaPartita }}
+    <div class="hero__ticket">
+      <div class="hero__ticket-main">
+        <p class="hero__ticket-label">Prossima partita</p>
+        <p class="hero__ticket-teams">{{ .casa }}<br>vs {{ .trasferta }}</p>
+        <p class="hero__ticket-meta">{{ .campo }} · {{ dateFormat "02/01/2006" .data }} ore {{ .ora }}</p>
+      </div>
+      <div class="hero__ticket-stub">
+        <span class="hero__ticket-giornata">{{ .giornata }}ª</span>
+        <span class="hero__ticket-giornata-label">Giornata</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="quick-links">
+  <div class="container">
+    <h2>Il sito, in quattro sezioni</h2>
+    <div class="quick-links__grid">
+      <a class="quick-links__card" href="{{ "/rosa/" | relURL }}">
+        <span class="quick-links__num">Rosa</span>
+        <h3>La squadra</h3>
+        <p>Giocatori, numeri di maglia e staff tecnico di questa stagione.</p>
+      </a>
+      <a class="quick-links__card" href="{{ "/campionato-in-corso/" | relURL }}">
+        <span class="quick-links__num">Campionato</span>
+        <h3>Classifica e risultati</h3>
+        <p>La classifica aggiornata, i risultati recenti e la prossima partita.</p>
+      </a>
+      <a class="quick-links__card" href="{{ "/archivio/" | relURL }}">
+        <span class="quick-links__num">Archivio</span>
+        <h3>Stagioni passate</h3>
+        <p>Piazzamenti, promozioni e retrocessioni di ogni stagione giocata.</p>
+      </a>
+      <a class="quick-links__card" href="{{ "/storia/" | relURL }}">
+        <span class="quick-links__num">Storia</span>
+        <h3>La società</h3>
+        <p>Dalla fondazione a oggi, i momenti che hanno fatto la squadra.</p>
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

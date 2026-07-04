@@ -1,0 +1,69 @@
+classifica:
+  - pos: 1
+    squadra: "Virtus Collina"
+    punti: 34
+    giocate: 16
+    vinte: 11
+    pareggiate: 1
+    perse: 4
+    nostra: false
+  - pos: 2
+    squadra: "ASD Nome Squadra"
+    punti: 31
+    giocate: 16
+    vinte: 10
+    pareggiate: 1
+    perse: 5
+    nostra: true
+  - pos: 3
+    squadra: "Real Fontanile"
+    punti: 29
+    giocate: 16
+    vinte: 9
+    pareggiate: 2
+    perse: 5
+    nostra: false
+  - pos: 4
+    squadra: "Atletico Piandolce"
+    punti: 25
+    giocate: 16
+    vinte: 7
+    pareggiate: 4
+    perse: 5
+    nostra: false
+  - pos: 5
+    squadra: "Sporting Valbona"
+    punti: 20
+    giocate: 16
+    vinte: 6
+    pareggiate: 2
+    perse: 8
+    nostra: false
+
+prossimaPartita:
+  casa: "ASD Nome Squadra"
+  trasferta: "Real Fontanile"
+  data: "2026-01-18"
+  ora: "15:00"
+  campo: "Stadio Comunale"
+  giornata: 17
+
+risultatiRecenti:
+  - giornata: 16
+    casa: "ASD Nome Squadra"
+    trasferta: "Sporting Valbona"
+    golCasa: 3
+    golTrasferta: 1
+    data: "2026-01-11"
+  - giornata: 15
+    casa: "Atletico Piandolce"
+    trasferta: "ASD Nome Squadra"
+    golCasa: 1
+    golTrasferta: 1
+    data: "2026-01-04"
+  - giornata: 14
+    casa: "ASD Nome Squadra"
+    trasferta: "Virtus Collina"
+    golCasa: 0
+    golTrasferta: 2
+    data: "2025-12-21"

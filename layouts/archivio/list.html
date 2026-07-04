@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $a := .Site.Data.archivio }}
+<div class="container">
+  <div class="section-intro">
+    <p class="section-intro__eyebrow">{{ len $a.stagioni }} stagioni registrate</p>
+    <h2>Archivio Campionati</h2>
+    <p>Ogni stagione disputata dalla società, con piazzamento finale e girone.</p>
+  </div>
+
+  <div class="raccoglitore">
+    {{ range $a.stagioni }}
+    <div class="raccoglitore__voce{{ if eq .piazzamento 1 }} raccoglitore__voce--titolo{{ end }}">
+      <div>
+        <span class="raccoglitore__stagione">{{ .stagione }}</span>
+        <span class="raccoglitore__cat">{{ .categoria }} · {{ .girone }}</span>
+      </div>
+      <div class="raccoglitore__dettagli">
+        <strong>{{ .puntiFinali }} punti</strong> in {{ .partiteGiocate }} partite
+        ({{ .vittorie }}V, {{ .pareggi }}N, {{ .sconfitte }}P)
+        {{ if .note }}<div class="raccoglitore__note">{{ .note }}</div>{{ end }}
+      </div>
+      <div class="raccoglitore__piazzamento">
+        {{ .piazzamento }}°
+        <small>{{ if eq .piazzamento 1 }}Campioni{{ else }}Posizione{{ end }}</small>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

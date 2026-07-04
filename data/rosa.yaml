@@ -1,0 +1,52 @@
+giocatori:
+  - numero: 1
+    nome: "Marco Bianchi"
+    ruolo: "Portiere"
+    dataNascita: "1998-03-14"
+    piede: "Destro"
+  - numero: 4
+    nome: "Luca Ferrari"
+    ruolo: "Difensore"
+    dataNascita: "1999-07-02"
+    piede: "Destro"
+  - numero: 5
+    nome: "Andrea Romano"
+    ruolo: "Difensore"
+    dataNascita: "1997-11-20"
+    piede: "Sinistro"
+    fasciaCapitano: true
+  - numero: 6
+    nome: "Davide Colombo"
+    ruolo: "Difensore"
+    dataNascita: "2001-01-09"
+    piede: "Destro"
+  - numero: 8
+    nome: "Simone Ricci"
+    ruolo: "Centrocampista"
+    dataNascita: "2000-05-30"
+    piede: "Destro"
+  - numero: 10
+    nome: "Matteo Greco"
+    ruolo: "Centrocampista"
+    dataNascita: "1996-09-15"
+    piede: "Sinistro"
+  - numero: 11
+    nome: "Federico Conti"
+    ruolo: "Attaccante"
+    dataNascita: "2002-02-28"
+    piede: "Destro"
+  - numero: 17
+    nome: "Alessandro Marino"
+    ruolo: "Attaccante"
+    dataNascita: "1999-12-03"
+    piede: "Ambidestro"
+
+staff:
+  - ruolo: "Allenatore"
+    nome: "Giuseppe Villa"
+  - ruolo: "Vice Allenatore"
+    nome: "Paolo Serra"
+  - ruolo: "Preparatore Portieri"
+    nome: "Roberto Gatti"
+  - ruolo: "Dirigente Accompagnatore"
+    nome: "Franco Longo"

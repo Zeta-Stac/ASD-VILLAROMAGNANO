@@ -1,0 +1,32 @@
+baseURL: "https://tuosquadra.example.it/"
+languageCode: "it-it"
+title: "ASD Nome Squadra"
+theme: ""
+
+params:
+  nomeSquadra: "ASD Nome Squadra"
+  sottotitolo: "Fondata nel 1978 · Sempre in campo"
+  campoAttuale: "Stadio Comunale, Via dello Sport 1"
+  stagioneCorrente: "2025/2026"
+  girone: "Girone B"
+  categoria: "Seconda Categoria"
+
+menu:
+  main:
+    - name: "Rosa"
+      url: "/rosa/"
+      weight: 10
+    - name: "Campionato in corso"
+      url: "/campionato-in-corso/"
+      weight: 20
+    - name: "Archivio"
+      url: "/archivio/"
+      weight: 30
+    - name: "Storia"
+      url: "/storia/"
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

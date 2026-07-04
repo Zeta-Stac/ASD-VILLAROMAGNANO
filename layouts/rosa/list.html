@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $r := .Site.Data.rosa }}
+<div class="container">
+  <div class="section-intro">
+    <p class="section-intro__eyebrow">Stagione {{ .Site.Params.stagioneCorrente }}</p>
+    <h2>Rosa</h2>
+    <p>La distinta ufficiale della squadra: numeri di maglia, ruoli e reparto.</p>
+  </div>
+
+  <div class="distinta">
+    <div class="distinta__stamp">Ufficiale</div>
+    <div class="distinta__head">
+      <span>{{ .Site.Params.nomeSquadra }}</span>
+      <span>{{ len $r.giocatori }} giocatori</span>
+    </div>
+    <ul class="distinta__list">
+      {{ range $r.giocatori }}
+      <li class="distinta__row">
+        <span class="distinta__numero">{{ .numero }}</span>
+        <span class="distinta__nome">
+          {{ .nome }}{{ if .fasciaCapitano }}<span class="capitano">C</span>{{ end }}
+        </span>
+        <span class="distinta__ruolo">{{ .ruolo }}</span>
+        <span class="distinta__dettaglio">{{ .piede }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="staff-box">
+    <h3>Staff tecnico</h3>
+    <ul>
+      {{ range $r.staff }}
+      <li><span class="staff-ruolo">{{ .ruolo }}</span>{{ .nome }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
