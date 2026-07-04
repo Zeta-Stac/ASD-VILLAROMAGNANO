@@ -1,7 +1,6 @@
 baseURL: "https://tuosquadra.example.it/"
 languageCode: "it-it"
 title: "ASD Nome Squadra"
-theme: ""
 
 params:
   nomeSquadra: "ASD Nome Squadra"
